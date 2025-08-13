@@ -1,0 +1,286 @@
+{
+  "school_info": {
+    "name": "Lotus Medical Career College",
+    "address": "1460 E. Holt Avenue, Suite 176A",
+    "city": "Pomona",
+    "state": "CA",
+    "zip": "91767",
+    "phone": "(909) 625-8050",
+    "email": "info@lotusmedical.com",
+    "website": "lotusmedical.com",
+    "alternate_website": "lmccpomona.com",
+    "established": "2015",
+    "graduates": "4000+",
+    "bppe_code": "94909726",
+    "cdph_approved": true,
+    "wioa_approved": true
+  },
+  "programs": {
+    "CNA": {
+      "full_name": "Certified Nursing Assistant",
+      "abbreviation": "CNA",
+      "duration": {
+        "pm_program": {
+          "total_days": 31,
+          "theory_schedule": "Mon-Fri, 4:00-10:30 PM (online via Zoom/Canvas)",
+          "clinical_schedule": "Mon-Fri, 3:00-8:00 PM"
+        },
+        "am_program": {
+          "total_days": 27,
+          "theory_schedule": "Mon-Fri, 8:00 AM-2:30 PM (in-person)",
+          "clinical_schedule": "Mon-Fri, 7:00 AM-1:30 PM"
+        }
+      },
+      "hours": {
+        "theory": 60,
+        "clinical": 102,
+        "total": 162
+      },
+      "cost": {
+        "tuition": 2995,
+        "all_inclusive": true,
+        "includes": [
+          "2 sets of uniforms",
+          "Clinical supplies & blood pressure kit",
+          "Textbooks and digital materials",
+          "CPR certification",
+          "Live Scan fingerprinting",
+          "State exam fee ($120 - refunded when scheduled)"
+        ],
+        "student_responsible": [
+          "Physical exam and TB test",
+          "COVID-19 vaccination",
+          "White athletic shoes",
+          "Watch with second hand"
+        ]
+      },
+      "pass_rate": "92%",
+      "prerequisites": [
+        "Minimum age: 16 years old",
+        "Valid SSN or ITIN",
+        "Basic English proficiency",
+        "Pass health screening and TB test",
+        "Clear criminal background check (Live Scan)"
+      ],
+      "certification": "California Nurse Assistant State Exam",
+      "job_opportunities": [
+        "Hospitals",
+        "Nursing homes",
+        "Assisted living facilities",
+        "Home healthcare",
+        "Hospice care"
+      ],
+      "salary_range": "$18-24/hour starting",
+      "modules": 17
+    },
+    "HHA": {
+      "full_name": "Home Health Aide",
+      "abbreviation": "HHA",
+      "duration": {
+        "total_weeks": 3,
+        "theory": {
+          "hours": 20,
+          "week": 1,
+          "morning_schedule": "Mon-Fri, 8:00 AM - 12:00 PM",
+          "evening_schedule": "Mon-Fri, 5:00 PM - 9:00 PM"
+        },
+        "clinical": {
+          "hours": 20,
+          "weeks": "2-3",
+          "schedule": "Saturday & Sunday, 7:00 AM - 3:30 PM"
+        }
+      },
+      "hours": {
+        "theory": 20,
+        "clinical": 20,
+        "total": 40
+      },
+      "cost": {
+        "tuition": 850,
+        "all_inclusive": true,
+        "state_exam_paid": true,
+        "includes": [
+          "Professional instruction from certified HHAs",
+          "Comprehensive textbook and study materials ($80 value)",
+          "Complete uniform and protective equipment ($50 value)",
+          "All lab supplies and training materials ($60 value)",
+          "STATE EXAM FEE COMPLETELY COVERED ($120 value)",
+          "CPR certification preparation",
+          "Job placement assistance"
+        ],
+        "payment_options": [
+          "$250 registration fee",
+          "Remaining $600 in installments",
+          "WIOA funding accepted"
+        ]
+      },
+      "prerequisites": [
+        "Active CNA certification required",
+        "Weekend availability for clinical",
+        "Physical ability to lift/transfer clients"
+      ],
+      "certification": "CNA/HHA Competency Evaluation",
+      "job_opportunities": [
+        "Home healthcare agencies",
+        "Private duty assignments",
+        "Hospice organizations",
+        "State-funded IHSS programs",
+        "Assisted living facilities",
+        "Adult day health centers"
+      ],
+      "salary_increase": "$3-6 more per hour than facility CNAs",
+      "modules": {
+        "1": "Introduction to Aide and Agency Role (2 hours)",
+        "2": "Interpretation of Medical and Social Needs (5 hours)",
+        "3": "Personal Care Services (5 hours)",
+        "4": "Nutrition (5 hours)",
+        "5": "Cleaning and Care Tasks (3 hours)"
+      }
+    },
+    "RNA": {
+      "full_name": "Restorative Nurse Assistant",
+      "abbreviation": "RNA",
+      "duration": {
+        "total_weeks": 2.5,
+        "schedule_options": {
+          "morning": "Mon-Fri, 8:00 AM - 12:00 PM",
+          "evening": "Mon-Fri, 5:00 PM - 9:00 PM"
+        }
+      },
+      "hours": {
+        "theory": 50,
+        "clinical": 0,
+        "total": 50
+      },
+      "cost": {
+        "tuition": 685.50,
+        "all_inclusive": true,
+        "includes": [
+          "50 hours of expert instruction",
+          "Comprehensive textbook and study guide ($85.50 value)",
+          "Access to all specialized equipment",
+          "Skills lab practice time",
+          "QCHF certification exam",
+          "Certificate of completion"
+        ],
+        "payment_options": [
+          "$250 registration fee",
+          "Remaining balance in installments",
+          "WIOA funding accepted"
+        ]
+      },
+      "prerequisites": [
+        "Active CNA certification required",
+        "CNA must remain active throughout program"
+      ],
+      "certification": "QCHF (Quality Care Health Foundation) certification",
+      "job_opportunities": [
+        "Skilled nursing facilities",
+        "Rehabilitation centers",
+        "Long-term care communities",
+        "Memory care units",
+        "Post-acute care facilities"
+      ],
+      "salary_increase": "$2-5 more per hour than CNAs",
+      "modules": {
+        "1": "Introduction to Restorative Nursing (4 hours)",
+        "2": "Role of the Nursing Assistant in Restorative Care (6 hours)",
+        "3": "Anatomy and Physiology Related to Restorative Care (5 hours)",
+        "4": "Range of Motion Procedures (6 hours)",
+        "5": "Activities of Daily Living (6 hours)",
+        "6": "Ambulation Procedures (6 hours)",
+        "7": "Restorative Feeding Programs (6 hours)",
+        "8": "Overview of Dementia (5 hours)",
+        "9": "Communication (6 hours)"
+      }
+    },
+    "LVN": {
+      "full_name": "Licensed Vocational Nurse",
+      "abbreviation": "LVN",
+      "duration": {
+        "total_months": 12,
+        "schedule": "Full-time only",
+        "theory_hours": "TBD",
+        "clinical_hours": "TBD"
+      },
+      "hours": {
+        "theory": 0,
+        "clinical": 0,
+        "total": 1530
+      },
+      "cost": {
+        "tuition": 15000,
+        "all_inclusive": false,
+        "includes": [
+          "TBD - Awaiting complete list"
+        ],
+        "payment_options": [
+          "Financial aid available",
+          "Payment plans",
+          "WIOA funding for qualified students"
+        ]
+      },
+      "pass_rate": "TBD",
+      "prerequisites": [
+        "High school diploma or GED",
+        "Pass entrance exam",
+        "Complete application process"
+      ],
+      "certification": "California Board of Vocational Nursing and Psychiatric Technicians",
+      "job_opportunities": [
+        "Hospitals",
+        "Skilled nursing facilities",
+        "Medical offices",
+        "Home health agencies",
+        "Rehabilitation centers",
+        "Outpatient clinics"
+      ],
+      "salary_range": "$50,000-65,000 annually",
+      "modules": {
+        "note": "Full curriculum details coming tomorrow"
+      },
+      "note": "Complete program details will be added tomorrow - placeholders ready for data entry"
+    }
+  },
+  "financial_aid": {
+    "wioa": {
+      "available": true,
+      "coverage": "100% tuition for qualified students",
+      "provider": "America's Job Centers of California"
+    },
+    "payment_plans": {
+      "available": true,
+      "description": "5-6 installments available"
+    },
+    "employer_sponsorship": true,
+    "scholarships": "When available"
+  },
+  "important_dates": {
+    "next_orientation": "2025-08-14",
+    "application_deadline": "Rolling admissions"
+  },
+  "clinical_partners": {
+    "CNA": [
+      "Pomona Vista Care Center",
+      "Chino Valley Health Care Center",
+      "Inland Empire Rehabilitation Center",
+      "Claremont Care Center"
+    ],
+    "HHA": "Partnering home health agencies in Pomona area"
+  },
+  "compliance": {
+    "bppe_approved": true,
+    "bppe_number": "79461413",
+    "cdph_approved": true,
+    "wioa_disclaimer": "Funding available for eligible participants through America's Job Centers of California",
+    "prohibited_language": [
+      "Free training (without qualification)",
+      "Guaranteed job placement",
+      "Everyone qualifies",
+      "No cost (without context)"
+    ]
+  },
+  "version": "2.1.0",
+  "last_updated": "2025-08-10",
+  "data_source": "CNA_LMCC_Info, HHA_LMCC_Info, RNA_LMCC_Info folders"
+}

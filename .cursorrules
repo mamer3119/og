@@ -1,0 +1,47 @@
+# HOSTINGER HORIZONS CURSOR RULES
+
+## Project Type
+React 18 + Vite + Node.js exported from Hostinger Horizons. Static hosting deployment target.
+
+## Critical Constraints
+- NO re-import capability back to Horizons
+- Must build successfully with `npm run build` to static dist/
+- Deployment target: Hostinger shared/cloud hosting (static files only)
+- File size limits: 1024MB (Web), 3072-15360MB (Cloud)
+
+## Code Standards
+- React 18 with JSX/TSX syntax
+- ES modules import/export only
+- Vite build system (vite.config.js/ts)
+- Client-side routing only (React Router)
+- Standard Vite + React src/ structure
+
+## Forbidden Technologies
+- NO Next.js SSR/ISR (unless VPS)
+- NO webpack/CRA configs
+- NO Node.js APIs in client code
+- NO server-side rendering for shared hosting
+- NO local databases in production
+
+## Allowed Integrations
+- CSS: Standard CSS, modules, CSS-in-JS, Bootstrap 4.x/5.x
+- Images: .jpeg, .jpg, .png, .gif, .ico
+- Fonts: .woff, .woff2
+- Databases: Supabase, Firebase via connection strings
+- APIs: External HTTPS endpoints only
+- Payments: Stripe client-side SDK
+
+## Build Requirements
+- npm install must succeed
+- npm run build must produce clean dist/
+- No SSR dependencies in build
+- All assets via Vite build graph
+- Pinned dependency versions in package.json
+
+## Success Criteria
+Every suggestion must:
+- Maintain static build compatibility
+- Work without Node.js runtime
+- Stay within file size limits
+- Use only allowed file types
+- Pass Vite build process

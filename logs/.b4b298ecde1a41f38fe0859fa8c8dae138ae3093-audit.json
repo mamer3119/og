@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\moham\\Documents\\horizons-export-Lotus-Medical-Career-College\\logs\\.b4b298ecde1a41f38fe0859fa8c8dae138ae3093-audit.json",
+    "files": [
+        {
+            "date": 1755068309165,
+            "name": "C:\\Users\\moham\\Documents\\horizons-export-Lotus-Medical-Career-College\\logs\\mcp-puppeteer-2025-08-12.log",
+            "hash": "b743ba8da897dab3853f043c243e11e6600c0870bef2ebc6ef1bcf6f000db4aa"
+        },
+        {
+            "date": 1755068722275,
+            "name": "C:\\Users\\moham\\Documents\\horizons-export-Lotus-Medical-Career-College\\logs\\mcp-puppeteer-2025-08-13.log",
+            "hash": "04df9ad725b79445621f71e861c1b33a9734ce704eac72629ab14d71322b865e"
+        }
+    ],
+    "hashType": "sha256"
+}
