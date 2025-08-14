@@ -1,19 +1,156 @@
+# SEO Optimized .htaccess for Lotus Medical Career College
+# Hostinger Horizon Compatible Configuration
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+  
+  # Force HTTPS (Important for SEO)
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+  
+  # Remove www to prevent duplicate content
+  RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+  
+  # SEO-friendly URL redirects for CNA program pages
+  RewriteRule ^cna-classes-pomona/?$ /cna-classes-pomona.html [L]
+  RewriteRule ^cna-certification-california/?$ /cna-certification-california.html [L]
+  RewriteRule ^nurse-aide-training/?$ /nurse-aide-training.html [L]
+  
+  # Remove trailing slashes (except for directories)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)/$ /$1 [R=301,L]
+  
+  # Default React app routing
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.html [L]
 </IfModule>
 
+# Performance & Core Web Vitals Optimization
 <IfModule mod_headers.c>
-  Header set X-Powered-By "Hostinger Horizons"
-
-  # Cache everything on CDN by default
-  Header set Cache-Control "public, s-maxage=604800, max-age=0"
+  # Security Headers
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
   
-  # Cache in browser all assets
-  <If "%{REQUEST_URI} =~ m#^/assets/.*$#">
-    Header set Cache-Control "public, max-age=604800"
-  </If>
+  # Remove server signature
+  Header unset X-Powered-By
+  Header unset Server
+  
+  # Cache Control for Core Web Vitals
+  # HTML - No cache to ensure fresh content
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+  
+  # Images - Long cache for performance
+  <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  
+  # CSS and JavaScript - Moderate cache with validation
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=604800, must-revalidate"
+  </FilesMatch>
+  
+  # Fonts - Long cache
+  <FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  
+  # Enable CORS for fonts
+  <FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+# GZIP Compression for faster loading
+<IfModule mod_deflate.c>
+  # Compress HTML, CSS, JavaScript, Text, XML and fonts
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/ld+json
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  
+  # Remove browser bugs
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  Header append Vary User-Agent
+</IfModule>
+
+# Enable browser caching for SEO
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # Default expiration
+  ExpiresDefault "access plus 1 month"
+  
+  # HTML - No cache
+  ExpiresByType text/html "access plus 0 seconds"
+  
+  # Data interchange
+  ExpiresByType application/json "access plus 0 seconds"
+  ExpiresByType application/ld+json "access plus 0 seconds"
+  ExpiresByType application/xml "access plus 0 seconds"
+  ExpiresByType text/xml "access plus 0 seconds"
+  
+  # CSS and JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  
+  # Images
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType image/ico "access plus 1 year"
+  
+  # Fonts
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+</IfModule>
+
+# Prevent directory browsing
+Options -Indexes
+
+# Block bad bots and referrer spam
+<IfModule mod_rewrite.c>
+  RewriteCond %{HTTP_USER_AGENT} (ahrefs|semrush|mj12bot|dobot) [NC]
+  RewriteRule .* - [F]
+</IfModule>
+
+# Custom error pages for better UX
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403.html
+ErrorDocument 500 /500.html
+
+# Optimize ETags
+FileETag MTime Size
+
+# Keep-Alive for better performance
+<IfModule mod_headers.c>
+  Header set Connection keep-alive
 </IfModule>
